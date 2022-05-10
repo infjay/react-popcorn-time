@@ -1,10 +1,5 @@
 function Movie(props){
 
-    let content;
-
-    if(props.rating > 8) {
-        content = <span>Recommended</span>
-    }
 
     return(
         <div>
@@ -13,7 +8,7 @@ function Movie(props){
         <p>Genre: {props.genres}</p>
         <img src={props.imgURL} alt="image"></img>
         <p>Rating : {props.rating}/10 <br/>
-            {content}
+        {props.rating > 8 && <span>Recommended</span>}
        </p>
         </div>
     )
